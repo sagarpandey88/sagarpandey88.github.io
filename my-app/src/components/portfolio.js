@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import * as data from '../utils/portfolio-contents.json'
 
 
 function Portfolio(props) {
@@ -8,17 +9,23 @@ function Portfolio(props) {
     }, []);
     return (
         <div className="App-Portfolio">
-            <h2>A Full Stack developer</h2>
+           
             <div>
-                Roles and responsibilities
+               <h2> Roles and responsibilities</h2>
             </div>
             <div>
-                    <ul>
-                        
-                        <li>
-                            test item
-                        </li>
-                    </ul>
+                {data.Projects.map((item) => {
+                    return (
+                        <div>
+                            <h4>{item.title} as {item.Roles} </h4>
+                            <div>
+                            {item.Description}
+                            </div>
+                        </div>
+                    )
+
+                })
+                }
             </div>
         </div>);
 

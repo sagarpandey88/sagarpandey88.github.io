@@ -4,7 +4,10 @@ import Portfolio from './components/portfolio';
 import Offer from './components/offer';
 import Contact from './components/contactme';
 import LeftNavigation from './components/leftnavigation'
-import  './utils/portfolio-contents.json'
+import HomePage from './components/home'
+import './utils/portfolio-contents.json'
+import { AnimationClassNames } from '@fluentui/react'
+
 
 function App() {
 
@@ -51,37 +54,30 @@ function App() {
       <LeftNavigation showSections={showSections}  ></LeftNavigation>
       {
         showHome ?
-          <div>
-            <div className="App-HomePage-Name" >
-              Hi I am Sagar
-             </div>
-            <div className="App-HomePage-Desc" >
-              a software engineer specialized in front-end and back-end development
-               </div>
-            <div className="App-HomePage-logos" >
-              <img src={require("./images/Azure-logo.png")}  ></img>
-              <img src={require("./images/cosmos-logo.svg")}  ></img>
-              <img src={require("./images/react-logo.svg")}  ></img>
-              <img src={require("./images/sharepoint-logo.svg")}  ></img>
-            </div>
-          </div> : null
+          <HomePage></HomePage> : null
       }
+
       {showPortfolio ?
-        <div>
+        <div className={showPortfolio ? AnimationClassNames.slideLeftIn400 : "hiddenCard"} >
 
           <Portfolio Title="my god" Stack={[]} />
 
-        </div> : null
+        </div>
+        : null
       }
+
       {showOffer ?
-        <div>
+        <div className={showOffer ? AnimationClassNames.slideLeftIn400 : "hiddenCard"} >
           <Offer />
-        </div> : null
+        </div>
+        : null
       }
+
       {showContact ?
-        <div>
+        <div className={showContact ? AnimationClassNames.slideLeftIn400 : "hiddenCard"} >
           <Contact />
-        </div> : null
+        </div>
+        : null
       }
     </div>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import * as data from '../utils/portfolio-contents.json'
 
 function LeftNavigation(props) {
 
@@ -9,7 +10,7 @@ function LeftNavigation(props) {
                     <img src="/images/avatar.ad31e6ce.png" alt="" className="avatar" />
                 </div>
                 <div className="person-content">
-                    <h1 className="person-title p-name">Sagar Pandey</h1>
+                    <h1 className="person-title p-name">{data.FullName}</h1>
                     <h2 className="person-subtitle p-job-title p-note">Full-stack Software Engineer</h2>
                 </div>
             </a>
@@ -18,6 +19,7 @@ function LeftNavigation(props) {
 
                 <div className="navigation-extendable">
                     <ul>
+                        <li className=""><a onClick={() => { props.showSections("Home") }} >Home</a></li>
                         <li className=""><a onClick={() => { props.showSections("Portfolio") }} >Portfolio</a></li>
                         <li className=""><a onClick={() => { props.showSections("Offer") }}>My offer</a></li>
                         <li className=""><a onClick={() => { props.showSections("Contact") }}>Contact me</a></li>
