@@ -5,13 +5,10 @@ function LeftNavigation(props) {
 
     return (<aside className="App-site-sidebar">
         <div className="App-site-sidebar-inner h-card">
-            <a href="/" rel="me" className="person u-url">
-                <div className="person-avatar u-photo">
-                    <img src="/images/avatar.ad31e6ce.png" alt="" className="avatar" />
-                </div>
+            <a href="/" rel="me" >               
                 <div className="person-content">
-                    <h1 className="person-title p-name">{data.FullName}</h1>
-                    <h2 className="person-subtitle p-job-title p-note">Full-stack Software Engineer</h2>
+                    <h1 >{data.FullName}</h1>
+                    <h2 >Full-stack Software Engineer</h2>
                 </div>
             </a>
 
@@ -28,7 +25,10 @@ function LeftNavigation(props) {
                 </div>
 
             </nav>
-
+            <div>
+                <img alt="github" src={require("../images/github.svg")} style={{"height":"20px"}}  onClick={()=> alert("w")}  ></img>
+                <img alt="github" src={require("../images/blogger.svg")} style={{"height":"20px","background-color":"orange"}}  onClick={()=> alert("w")}  ></img>
+            </div>
         </div>
 
     </aside>);

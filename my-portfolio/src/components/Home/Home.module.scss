@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.gridContainer {
+  display: grid;
+  //   grid-template-columns: repeat(autofit, minmax(1000px, 2fr));
+  //   grid-gap: 1rem;
+  min-height: 98vh;
+}
+
+.gridHeader {
+  background-color: #f39f86;
+  background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+  grid-column: 1 / span 1;
+  height: 3rem;
+}
+
+.cardContainer {
+  // height: 80vh;
+}
+.cards {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
+  grid-gap: 1rem;
+}
+
+.gridFooter {
+  background-color: #000;
+  height: 3rem;
+  clear: both;
+  position: relative;
+
+  margin-top: 3rem;
+}
+
+.gridHeader > ul {
+  display: table;
+  text-align: center;
+  float: right;
+}
+
+.gridHeader > ul > li {
+  display: table-cell;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}

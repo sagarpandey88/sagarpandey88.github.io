@@ -7,6 +7,8 @@ import LeftNavigation from './components/leftnavigation'
 import HomePage from './components/home'
 import './utils/portfolio-contents.json'
 import { AnimationClassNames } from '@fluentui/react'
+import 'office-ui-fabric-react/dist/css/fabric.css';
+
 
 
 function App() {
@@ -51,6 +53,12 @@ function App() {
   }
   return (
     <div className="App">
+       <div className="ms-Grid" dir="ltr">
+          <div className="ms-Grid-row">
+              <div className="ms-Grid-col ms-sm6 ms-xl6">A</div>
+              <div className="ms-Grid-col ms-sm6 ms-xl6">B</div>
+          </div>
+      </div>
       <LeftNavigation showSections={showSections}  ></LeftNavigation>
       {
         showHome ?
