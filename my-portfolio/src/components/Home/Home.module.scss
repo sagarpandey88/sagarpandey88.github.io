@@ -1,3 +1,7 @@
+$theme-color-yellow: #f9d976;
+$theme-color-pink: #f39f86;
+$theme-color-black: #4c4c4c;
+
 body {
   margin: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -5,30 +9,23 @@ body {
 
 .gridContainer {
   display: grid;
-  //   grid-template-columns: repeat(autofit, minmax(1000px, 2fr));
-  //   grid-gap: 1rem;
   min-height: 98vh;
 }
 
-.gridHeader {
-  background-color: #f39f86;
-  background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
-  grid-column: 1 / span 1;
-  height: 3rem;
-}
-
-.cardContainer {
-  // height: 80vh;
-}
 .cards {
-  margin: 2rem;
+  margin: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
   grid-gap: 1rem;
 }
 
+.headSection {
+  height: 78vh;
+  margin-top: 5rem;
+}
+
 .gridFooter {
-  background-color: #000;
+  background-color: $theme-color-black;
   height: 3rem;
   clear: both;
   position: relative;
@@ -36,14 +33,9 @@ body {
   margin-top: 3rem;
 }
 
-.gridHeader > ul {
-  display: table;
-  text-align: center;
-  float: right;
+.headSectionImg {
+  width: 100%;
 }
 
-.gridHeader > ul > li {
-  display: table-cell;
-  padding-left: 2rem;
-  padding-right: 2rem;
+@media (min-width: 680px) {
 }

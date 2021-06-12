@@ -1,6 +1,7 @@
 import * as React from "react";
 import styles from "./Home.module.scss";
 import Header from "../Header/Header";
+import MyExperience from "../MyExperience/MyExperience";
 import codeThinkingImg from "../../images/codeThinking.svg";
 import { DeviceType } from "../../model/PortfolioModel";
 
@@ -8,24 +9,29 @@ const Home = (props: HomeProps) => {
   return (
     <div className={styles.gridContainer}>
       <Header deviceType={props.deviceType}></Header>
-      <div style={{ margin: "0 auto" }}>
-        <div className={styles.cards}>
+      <div style={{ margin: "0 5%" }}> 
+        <div className={styles.cards + " "+  styles.headSection}>
           <div>
-            Hi, I am Sagar Pandey, I am a full stack developer and consultant
+            <h2>
+              Hi,
+              <p> I am a full stack developer and consultant</p>
+            </h2>
           </div>
           <div style={{ textAlign: "center" }}>
-            <img style={{ width: "60%" }} src={codeThinkingImg}></img>
+            <img className={styles.headSectionImg}  src={codeThinkingImg}></img>
           </div>
         </div>
-        <div className={styles.cards}>
-          <div>My Experience</div>
-          <div>[Stack Photos]</div>
+        <div>
+          <h2>My Experience</h2>
+          <div>
+            <MyExperience></MyExperience>
+          </div>
         </div>
-        <div className={styles.cards}>
+        <div>
           <div>My Work</div>
           <div>[GIT Cards]</div>
         </div>
-        <div className={styles.cards}>
+        <div>
           <div>Contact Me</div>
           <div>[Contact Details]</div>
         </div>

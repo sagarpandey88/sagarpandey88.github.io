@@ -12,6 +12,7 @@ const App = () => {
   const breakpoint = 620;
 
   React.useEffect(() => {
+    
     const handleWindowResize = () => {
       setWidth(window.innerWidth);
       // Set the height in state as well as the width
@@ -23,6 +24,7 @@ const App = () => {
         setDeviceType("mobile");
       }
     };
+    handleWindowResize();
 
     window.addEventListener("resize", handleWindowResize);
     return () => window.removeEventListener("resize", handleWindowResize);
