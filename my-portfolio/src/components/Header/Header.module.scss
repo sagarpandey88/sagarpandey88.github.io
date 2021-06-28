@@ -1,7 +1,9 @@
+@use "../../styles/abstracts/global"  as gcss;
+
+
 $theme-color-yellow: #f9d976;
 $theme-color-pink: #f39f86;
 $theme-color-black: rgb(76, 76, 76);
-
 
 .gridHeader {
   background-color: $theme-color-pink;
@@ -12,6 +14,10 @@ $theme-color-black: rgb(76, 76, 76);
   );
   grid-column: 1 / span 1;
   height: 3rem;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 .gridHeader ul {
   display: table;
@@ -21,65 +27,62 @@ $theme-color-black: rgb(76, 76, 76);
 
 /*Header Css*/
 .headerLayout {
-    display: grid;
-    grid-template-columns: 0.5fr 1fr;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+}
+
+.headerLogoSection {
+  display: flex;
+  align-items: center;
+}
+.headerLogoSection img {
+  width: 2.8rem;
+}
+
+.headerTitleSection {
+  font-size: 1.4rem;
+}
+
+.desktopNav {
+  padding: 0;
+}
+.desktopNav > li {
+  display: table-cell;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 620px) {
+  .headerLayout {
+    grid-template-columns: 0.6fr 1fr;
   }
-  
-  .headerLogoSection
-  {
-    display:flex;
-    align-items: center;
-  }
-  .headerLogoSection img {
-    width: 2.8rem;
-  }
-  
-  .headerTitleSection {
-    font-size: 1.4rem;
-  }
-  
-  
-  .desktopNav {
-    padding:0;
-  }
-  .desktopNav > li {
-    display: table-cell;
-    padding-left: 2rem;
-    padding-right: 2rem;  
-  }
-  
-  @media (max-width: 620px) {
-    .headerLayout {    
-      grid-template-columns: 0.6fr 1fr;
-    }
-  }
+}
+
+/*Buger Menu*/
+
+.closeButton {
+  margin: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.burgerButton {
+  margin: 0.5rem;
+  float: right;
+}
 
 
-  /*Buger Menu*/
+.menuContainer {
+  width: 100%;
+  z-index: 100;
+  display: inline-block;
+  // background-color: #f39f86;
+  background-color:   gcss.$globalOrange;
+ // background-image: gcss.$headerColorGradient;
+  //background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+  position: absolute;
+  left: 0;
+}
 
-  .closeButton {
-    margin: 0.5rem;
-    font-size: 1.2rem;
-  }
-  
-  .burgerButton {
-    margin: 0.5rem;
-    float:right;
-  }
-  
-  .menuContainer {
-    width: 100%;
-    z-index: 100;
-    display:inline-block;
-  
-    background-color: #f39f86;
-    background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
-    position: absolute;
-    left: 0;
-  }
-  
-  .menuContainer > ul {
-    list-style: none;
-  }
-  
-  
+.menuContainer > ul {
+  list-style: none;
+}

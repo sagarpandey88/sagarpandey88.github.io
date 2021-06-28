@@ -3,14 +3,15 @@ import styles from "./Header.module.scss";
 import { DeviceType } from "../../model/PortfolioModel";
 import BurgerMenu from "./BurgerMenu";
 import spAvatar from "../../images/sp_Avataar.svg";
+import { scrollToElement } from "../../common/helpers";
 
 const Header = (props: IHeader) => {
   const desktopView = (
     <ul className={styles.desktopNav}>
-      <li>Home</li>
-      <li>Experience</li>
-      <li>My Work</li>
-      <li>Contact</li>
+      <li onClick={() => scrollToElement("intro")}> Home</li>
+      <li onClick={() => scrollToElement("exp")}>Experience</li>
+      <li onClick={() => scrollToElement("work")}>My Work</li>
+      <li onClick={() => scrollToElement("contact")}>Contact</li>
     </ul>
   );
 
@@ -20,9 +21,12 @@ const Header = (props: IHeader) => {
         <span>
           <img src={spAvatar} alt="sp Avatar" />
         </span>
-        <span>Sagar Pandey </span>        
+        <span>Sagar Pandey </span>
       </div>
-    <div>  {props.deviceType == "mobile" ? <BurgerMenu></BurgerMenu> : desktopView}</div>
+      <div>
+        {" "}
+        {props.deviceType == "mobile" ? <BurgerMenu></BurgerMenu> : desktopView}
+      </div>
     </div>
   );
 

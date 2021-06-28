@@ -1,41 +1,13 @@
-.tags {
-  display: block;
-  justify-content: center;
+
+.myExperience img {
+  width: 3rem;
+  padding: 1rem;
+}
+
+
+.myExperience .sectionContents {
   text-align: center;
-}
-
-.brokertag {
-  background: #cccccc;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
-  padding: 5px 10px;
-  margin: 3px 5px;
-  border-radius: 6px;
-  display: inline-block;
-
-}
-
-.catContainer {
-  margin: 1rem;
-  border: 1px solid #cccccc;
-}
-
-.expContainer {
-  margin: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
-  grid-gap: 1rem;
-}
-
-
-@media (max-width: 620px) {
-  .expContainer {
-    grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
-  }
-}
-
-.header
-{
-    background:#f9d976;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-gap: 3rem;
 }

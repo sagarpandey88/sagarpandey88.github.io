@@ -7,35 +7,33 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-.gridContainer {
+html{
+  // scroll-behavior: smooth;
+  // scroll-snap-type: y mandatory;
+}
+
+.bodyWrapper {
   display: grid;
   min-height: 98vh;
 }
 
-.cards {
-  margin: 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(49%, 1fr));
-  grid-gap: 1rem;
+.contents {
+  width: 90%;
+  height: 94%;
+  margin: 0 auto;
+
 }
 
-.headSection {
-  height: 78vh;
-  margin-top: 5rem;
-}
 
-.gridFooter {
+.footer {
   background-color: $theme-color-black;
+  scroll-snap-align: start;
   height: 3rem;
   clear: both;
   position: relative;
+  margin-top: 5rem;
 
-  margin-top: 3rem;
 }
 
-.headSectionImg {
-  width: 100%;
-}
 
-@media (min-width: 680px) {
-}
+

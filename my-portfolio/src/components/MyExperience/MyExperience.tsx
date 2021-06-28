@@ -1,71 +1,33 @@
 import * as React from "react";
 import styles from "./MyExperience.module.scss";
-const MyExperience = () => {
-  const data: IExperience[] = [
-    {
-      Category: "Front End",
-      Stack: [
-        { Title: "JS", SvgSrc: "" },
-        { Title: "React", SvgSrc: "" },
-      ],
-    },
-    {
-      Category: "Back End",
-      Stack: [
-        { Title: "Azure Function API", SvgSrc: "" },
-        { Title: ".Net Core", SvgSrc: "" },
-      ],
-    },
-    {
-      Category: "Database",
-      Stack: [
-        { Title: "MS SQL", SvgSrc: "" },
-        { Title: "Firebase", SvgSrc: "" },
-        { Title: "MongoDb", SvgSrc: "" },
-      ],
-    },
-    {
-      Category: "Platform / Tool / Methodologies",
-      Stack: [
-        { Title: "SharePoint", SvgSrc: "" },
-        { Title: "Azure", SvgSrc: "" },
-        { Title: "DevOps", SvgSrc: "" },
-        { Title: "Agile", SvgSrc: "" },
-      ],
-    },
-  ] as IExperience[];
+import commonStyle from "../../styles/commonStyles.module.scss";
+import { experienceData } from "./ExperienceConfiguration";
 
+const MyExperience = () => {
   return (
-    <div className={styles.expContainer}>
-      {data.map((exp, catIndex) => {
-        return (
-          <div className={styles.catContainer} key={catIndex}>
-            <div className={styles.header}>{exp.Category}</div>
-            <div className={styles.tags}>
-              {exp.Stack.map((expItem, expItemIndex) => {
-                return (
-                  <span className={styles.brokertag} key={expItemIndex}>
-                    {" "}
-                    {expItem.Title}
-                  </span>
-                );
-              })}
+    <div
+      className={[commonStyle.sectionContainer, styles.myExperience].join(" ")}
+      id="exp"
+    >
+      <div className={"sectionHeader"}>
+        <h2>My Experience</h2>
+      </div>
+      <div className={styles.sectionContents}>
+        {experienceData.map((exp, catIndex) => {
+          return (
+            <div key={catIndex}>
+              <div>
+                {exp.Stack.map((expItem, expItemIndex) => {
+                  return <img src={expItem.SvgSrc} />;
+                })}
+              </div>
+              <div> {exp.Category}</div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 };
 
 export default MyExperience;
-
-interface IExperience {
-  Category: string;
-  Stack: IStackDetails[];
-}
-
-interface IStackDetails {
-  Title: string;
-  SvgSrc: string;
-}

@@ -1,0 +1,41 @@
+.projectCard,
+.projectCard img {
+  width: 20rem;
+  height: 15rem;
+  overflow: hidden;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.projectCardHeading {
+  position: relative;
+  top: -1.8rem;  
+  background: white;
+  opacity: 0.6;
+  width: 100%;
+  margin: 0;
+  height: 1.4rem;
+  overflow: hidden;
+  font-size:1.3rem;
+}
+.projectCardHeading:hover {
+  height: 12rem;
+  top: -12rem;
+  transition: top 0.5s;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+.workSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  justify-items: center;
+  grid-row-gap: 2rem;
+  grid-column-gap: 2rem;
+}
+
+/* Larger Devices*/
+@media (min-width: 800px) {
+  .workSection {
+    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  }
+}

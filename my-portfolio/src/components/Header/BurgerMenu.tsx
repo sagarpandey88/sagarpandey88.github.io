@@ -1,6 +1,7 @@
 import * as React from "react";
 import hamburgerImg from "../../images/hamburger.svg";
 import styles from "./Header.module.scss"
+import { scrollToElement } from "../../common/helpers";
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
@@ -15,10 +16,10 @@ const BurgerMenu = () => {
     >
       <span className={styles.closeButton} onClick={onMenuToggle}> X </span>
       <ul>
-        <li>Home</li>
-        <li>Experience</li>
-        <li>My Work</li>
-        <li>Contact</li>
+        <li onClick={() => scrollToElement("intro")}> Home</li>
+        <li onClick={() => scrollToElement("exp")} >Experience</li>
+        <li onClick={() => scrollToElement("work")}>My Work</li>
+        <li onClick={() => scrollToElement("contact")}>Contact</li>
       </ul>
     </div>
   );

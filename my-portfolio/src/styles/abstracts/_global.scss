@@ -1,0 +1,19 @@
+/**
+This file contains global colors and fonts. Pls use @use in reset of the css
+*/
+
+$globalOrange:#f39f86;
+
+html {
+  $globalOrange:#fff;
+  $headerColorGradient: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+}
+
+html[data-theme="blue"]{
+  
+ 
+    $headerColorGradient:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(3,182,141,1) 0%, rgba(0,212,255,1) 100%);
+    $globalOrange: #fff;
+}
+
+

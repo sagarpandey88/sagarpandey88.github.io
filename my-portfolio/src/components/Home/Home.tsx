@@ -2,41 +2,45 @@ import * as React from "react";
 import styles from "./Home.module.scss";
 import Header from "../Header/Header";
 import MyExperience from "../MyExperience/MyExperience";
-import codeThinkingImg from "../../images/codeThinking.svg";
+import MyWork from "../MyWork/MyWork";
+
 import { DeviceType } from "../../model/PortfolioModel";
+import IntroSection from "../IntroSection/IntroSection";
 
 const Home = (props: HomeProps) => {
   return (
-    <div className={styles.gridContainer}>
+    <div className={styles.bodyWrapper}>
       <Header deviceType={props.deviceType}></Header>
-      <div style={{ margin: "0 5%" }}> 
-        <div className={styles.cards + " "+  styles.headSection}>
-          <div>
-            <h2>
-              Hi,
-              <p> I am a full stack developer and consultant</p>
-            </h2>
-          </div>
-          <div style={{ textAlign: "center" }}>
-            <img className={styles.headSectionImg}  src={codeThinkingImg}></img>
-          </div>
-        </div>
-        <div>
-          <h2>My Experience</h2>
-          <div>
-            <MyExperience></MyExperience>
-          </div>
-        </div>
-        <div>
-          <div>My Work</div>
-          <div>[GIT Cards]</div>
-        </div>
-        <div>
+      <div className={styles.contents}>
+        <IntroSection></IntroSection>
+        <MyExperience></MyExperience>
+        <MyWork></MyWork>
+
+        <div id="contact"
+          style={{
+            marginTop: "20px",
+            paddingTop: "4rem",
+            height: "94vh",
+            margin: "5rem 1rem",
+            scrollSnapAlign: "start",
+          }}
+        >
           <div>Contact Me</div>
-          <div>[Contact Details]</div>
+          <div>
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSc0xtYuCBruOO61lDWpJfqRW2lxEIdySyROtLAHsM41bO88KA/viewform?embedded=true"
+              width="95%"
+              height="673"
+              frameBorder="0"
+              marginHeight="0"
+              marginWidth="0"
+            >
+              Loading…
+            </iframe>
+          </div>
         </div>
       </div>
-      <div className={styles.gridFooter}> Full Width Footer </div>
+      <div className={styles.footer}> All Rights Resevered </div>
     </div>
   );
 };
