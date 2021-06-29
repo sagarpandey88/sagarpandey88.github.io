@@ -18,7 +18,7 @@ const MyExperience = () => {
             <div key={catIndex}>
               <div>
                 {exp.Stack.map((expItem, expItemIndex) => {
-                  return <img src={expItem.SvgSrc} />;
+                  return <img src={expItem.SvgSrc} alt={expItem.Title} key={expItemIndex} />;
                 })}
               </div>
               <div> {exp.Category}</div>

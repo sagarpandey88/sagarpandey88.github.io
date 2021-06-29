@@ -8,6 +8,16 @@
 .myExperience .sectionContents {
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 3rem;
+}
+
+
+ /* Larger Devices*/
+ @media (min-width:800px) {
+
+  .topSectionHello {
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+
+  }
 }

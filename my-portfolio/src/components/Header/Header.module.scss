@@ -50,6 +50,7 @@ $theme-color-black: rgb(76, 76, 76);
   display: table-cell;
   padding-left: 2rem;
   padding-right: 2rem;
+  cursor: pointer;
 }
 
 @media (max-width: 620px) {
@@ -85,4 +86,10 @@ $theme-color-black: rgb(76, 76, 76);
 
 .menuContainer > ul {
   list-style: none;
+  font-size: 3rem;
+  margin-left: 13%;
+  float:none;
+  
 }
+
+
