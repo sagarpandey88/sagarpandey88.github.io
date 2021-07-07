@@ -1,7 +1,26 @@
 .sectionContainer {
-    margin: 5rem 1rem;
-    scroll-snap-align: start;
-    padding-top: 2rem;
-    /*this is added for scroll snap*/
-    // height: 94vh;
+  margin: 5rem 1rem;
+  scroll-snap-align: start;
+  padding-top: 2rem;
+  /*this is added for scroll snap*/
+  // height: 94vh;
+}
+
+.downArrowButton {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.downArrowButton img {
+  width: 1rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  animation: beat 0.5s infinite alternate;
+}
+
+@keyframes beat {
+  to {
+    transform: scale(1.4);
   }
+}

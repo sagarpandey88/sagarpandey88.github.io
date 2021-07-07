@@ -8,16 +8,16 @@
 
 .projectCardHeading {
   position: relative;
-  top: -1.8rem;  
+  top: -1.8rem;
   background: white;
   opacity: 0.6;
   width: 100%;
   margin: 0;
   height: 1.4rem;
   overflow: hidden;
-  font-size:1.3rem;
+  font-size: 1.3rem;
 }
-.projectCardHeading:hover {
+.projectCard:hover > .projectCardHeading {
   height: 12rem;
   top: -12rem;
   transition: top 0.5s;
@@ -25,7 +25,9 @@
   opacity: 0.8;
 }
 
-.workSection {
+
+
+.workSection .sectionContents {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   justify-items: center;
@@ -35,7 +37,12 @@
 
 /* Larger Devices*/
 @media (min-width: 800px) {
-  .workSection {
+  .workSection .sectionContents {
     grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    
+  }
+
+  .workSection{
+    height: 94vh;
   }
 }

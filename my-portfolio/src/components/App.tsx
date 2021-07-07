@@ -9,7 +9,7 @@ const App = () => {
 
   const [deviceType, setDeviceType] = React.useState<DeviceType>("desktop");
 
-  const breakpoint = 620;
+  const breakpoint = 720;
 
   React.useEffect(() => {
     

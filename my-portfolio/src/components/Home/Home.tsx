@@ -6,17 +6,19 @@ import MyWork from "../MyWork/MyWork";
 
 import { DeviceType } from "../../model/PortfolioModel";
 import IntroSection from "../IntroSection/IntroSection";
+import MyCredentials from "../MyCredentials/MyCredentials";
 
 const Home = (props: HomeProps) => {
   return (
     <div className={styles.bodyWrapper}>
       <Header deviceType={props.deviceType}></Header>
       <div className={styles.contents}>
-        <IntroSection></IntroSection>
-        <MyExperience></MyExperience>
-        <MyWork></MyWork>
-
-        <div id="contact"
+        <IntroSection></IntroSection> 
+         <MyExperience></MyExperience> 
+         <MyWork></MyWork> 
+         <MyCredentials></MyCredentials>
+         <div
+          id="contact"
           style={{
             marginTop: "20px",
             paddingTop: "4rem",
@@ -38,7 +40,7 @@ const Home = (props: HomeProps) => {
               Loading…
             </iframe>
           </div>
-        </div>
+        </div> 
       </div>
       <div className={styles.footer}> All Rights Resevered </div>
     </div>

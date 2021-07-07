@@ -19,6 +19,7 @@ const BurgerMenu = () => {
         <li onClick={() => scrollToElement("intro")}> Home</li>
         <li onClick={() => scrollToElement("exp")} >Experience</li>
         <li onClick={() => scrollToElement("work")}>My Work</li>
+        <li onClick={() => scrollToElement("creds")}>My Creds</li>
         <li onClick={() => scrollToElement("contact")}>Contact</li>
       </ul>
     </div>

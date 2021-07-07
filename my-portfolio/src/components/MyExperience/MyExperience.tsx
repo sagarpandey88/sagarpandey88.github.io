@@ -1,7 +1,8 @@
 import * as React from "react";
 import styles from "./MyExperience.module.scss";
 import commonStyle from "../../styles/commonStyles.module.scss";
-import { experienceData } from "./ExperienceConfiguration";
+import { APP_CONFIG as config } from "../../config/portfolio.config";
+import DownArrow from "../Home/DownArrow";
 
 const MyExperience = () => {
   return (
@@ -13,12 +14,18 @@ const MyExperience = () => {
         <h2>My Experience</h2>
       </div>
       <div className={styles.sectionContents}>
-        {experienceData.map((exp, catIndex) => {
+        {config.ExperienceData.map((exp, catIndex) => {
           return (
             <div key={catIndex}>
               <div>
                 {exp.Stack.map((expItem, expItemIndex) => {
-                  return <img src={expItem.SvgSrc} alt={expItem.Title} key={expItemIndex} />;
+                  return (
+                    <img
+                      src={expItem.SvgSrc}
+                      alt={expItem.Title}
+                      key={expItemIndex}
+                    />
+                  );
                 })}
               </div>
               <div> {exp.Category}</div>
@@ -26,6 +33,7 @@ const MyExperience = () => {
           );
         })}
       </div>
+      <DownArrow navigateToSectionId="work"></DownArrow>
     </div>
   );
 };

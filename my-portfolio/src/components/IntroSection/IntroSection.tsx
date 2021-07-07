@@ -2,10 +2,12 @@ import React from "react";
 import styles from "./IntroSection.module.scss";
 import { scrollToElement } from "../../common/helpers";
 import codeThinkingImg from "../../images/codeThinking.svg";
+import downArrow from "../../images/downArrow.png";
+import DownArrow from "../Home/DownArrow";
 
 const IntroSection = () => {
   return (
-    <div className={styles.topSection} id="intro" >
+    <div className={styles.topSection} id="intro">
       <div className={styles.topSectionHello}>
         <div>
           <h2>Hi, I am a Full Stack Developer and Consultant</h2>
@@ -14,15 +16,8 @@ const IntroSection = () => {
           <img src={codeThinkingImg} alt="Img" />
         </div>
       </div>
-      <div
-        className={styles.topSectionDownButton}
-        onClick={() => scrollToElement("exp")}
-      >
-        <img
-          src="https://image.flaticon.com/icons/png/512/130/130900.png"
-          alt="Down arrow"
-        />
-      </div>
+      <DownArrow navigateToSectionId="exp"></DownArrow>
+    
     </div>
   );
 };

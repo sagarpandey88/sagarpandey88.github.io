@@ -1,9 +1,7 @@
-
 .myExperience img {
   width: 3rem;
   padding: 1rem;
 }
-
 
 .myExperience .sectionContents {
   text-align: center;
@@ -12,12 +10,13 @@
   grid-gap: 3rem;
 }
 
-
- /* Larger Devices*/
- @media (min-width:800px) {
-
+/* Larger Devices*/
+@media (min-width: 800px) {
   .topSectionHello {
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  }
 
+  .myExperience {
+    height: 94vh;
   }
 }
