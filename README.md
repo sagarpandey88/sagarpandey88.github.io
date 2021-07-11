@@ -22,7 +22,7 @@ Below is the feature status
 |Sr No|Feature|Status|
 |-----|-------|-------|
 |1| Basic layout|Complete|
-|2| Configurations|Pending|
+|2| Configurations|Complete|
 |3| Color Themes|Pending|
 |4| PWA|Pending|
 |5| Contact Section with Email.js|Pending|
