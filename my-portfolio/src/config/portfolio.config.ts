@@ -6,7 +6,7 @@ export const APP_CONFIG = {
   Title: "Sagar Pandey",
   IntroSectionMessage: "Hi, I am a Full Stack Developer and Consultant",
   GithubUrl:"https://github.com/sagarpandey88/",
-  ResumeUrl:"",
+  ResumeUrl:"https://github.com/sagarpandey88/sagarpandey88.github.io/raw/main/my-portfolio/src/resources/SagarPandey_Resume_2021.pdf",
   AvatarSrc:"",
   ExperienceData: [
     {

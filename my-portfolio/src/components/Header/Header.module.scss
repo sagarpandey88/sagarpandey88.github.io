@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
 }
-.headerLogoSection object {
+.headerLogoSection img {
   width: 2.8rem;
 }
 
@@ -69,7 +69,7 @@
   z-index: 100;
   display: inline-block;
   // background-color: #f39f86;
-  background-color: var(--headerColorGradient);
+  background-color: var(--headerColorGradientEnd);
   // background-image: gcss.$headerColorGradient;
   //background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
   position: absolute;

@@ -26,9 +26,10 @@ const Header = (props: IHeader) => {
       <div className={styles.headerLayout}>
         <div className={styles.headerLogoSection}>
           <span>
-            <object type="image/svg+xml" data={spAvatar} id="svgAvatar" >
+            <img src={spAvatar}></img>
+            {/* <object type="image/svg+xml" data={spAvatar} id="svgAvatar" >
               <img src={spAvatar} />
-            </object>
+            </object> */}
           </span>
           <span>{config.APP_CONFIG.Title} </span>
         </div>
