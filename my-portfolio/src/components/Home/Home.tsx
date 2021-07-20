@@ -9,15 +9,16 @@ import IntroSection from "../IntroSection/IntroSection";
 import MyCredentials from "../MyCredentials/MyCredentials";
 
 const Home = (props: HomeProps) => {
+  
   return (
     <div className={styles.bodyWrapper}>
       <Header deviceType={props.deviceType}></Header>
       <div className={styles.contents}>
-        <IntroSection></IntroSection> 
-         <MyExperience></MyExperience> 
-         <MyWork></MyWork> 
-         <MyCredentials></MyCredentials>
-         <div
+        <IntroSection></IntroSection>
+        <MyExperience></MyExperience>
+        <MyWork></MyWork>
+        <MyCredentials></MyCredentials>
+        <div
           id="contact"
           style={{
             marginTop: "20px",
@@ -27,7 +28,9 @@ const Home = (props: HomeProps) => {
             scrollSnapAlign: "start",
           }}
         >
-          <div>Contact Me</div>
+          <div>
+            <h2>Contact Me</h2>
+          </div>
           <div>
             <iframe
               src="https://docs.google.com/forms/d/e/1FAIpQLSc0xtYuCBruOO61lDWpJfqRW2lxEIdySyROtLAHsM41bO88KA/viewform?embedded=true"
@@ -40,9 +43,11 @@ const Home = (props: HomeProps) => {
               Loading…
             </iframe>
           </div>
-        </div> 
+        </div>
       </div>
-      <div className={styles.footer}> All Rights Resevered </div>
+      <div className={styles.footer}>
+        All Rights Resevered      
+      </div>
     </div>
   );
 };

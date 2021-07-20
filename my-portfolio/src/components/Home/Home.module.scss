@@ -1,6 +1,4 @@
-$theme-color-yellow: #f9d976;
-$theme-color-pink: #f39f86;
-$theme-color-black: #4c4c4c;
+
 
 body {
   margin: 0;
@@ -26,7 +24,7 @@ html{
 
 
 .footer {
-  background-color: $theme-color-black;
+  background-color: #4c4c4c;
   scroll-snap-align: start;
   height: 3rem;
   clear: both;

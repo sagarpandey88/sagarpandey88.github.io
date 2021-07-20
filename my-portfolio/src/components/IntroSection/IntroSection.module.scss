@@ -1,67 +1,51 @@
-
-  .topSection {
-    text-align: center;
-    height: 94vh;
-    position: relative;
-    animation: fadeIn 3s;
-    scroll-snap-align: start;
-    padding-top: 3rem;
-    /*this is added for scroll snap*/
+.topSection {
+  text-align: center;
+  height: 94vh;
+  position: relative;
+  animation: fadeIn 3s;
+  scroll-snap-align: start;
+  padding-top: 3rem;
+  /*this is added for scroll snap*/
 }
 
 .topSectionHello {
-
-    margin-top: 5rem;
-    vertical-align: middle;
-    display: grid;
+  margin-top: 5rem;
+  vertical-align: middle;
+  display: grid;
 }
 
-.topSectionHello img {
-    width: 320px;
+.topSectionHelloRightImage  {
+  width: 320px;
 }
 
-
-// .topSectionDownButton {
-//     margin-top: 5rem;
-// }
-
-// .topSectionDownButton img {
-//     width: 1rem;
-//     border: 1px solid black;
-//     border-radius: 1rem;
-//     padding: 0.5rem;
-//     animation: beat .50s infinite alternate;
-// }
-
+.topSectionIcons img {
+  width: 2rem;
+  padding: 1rem;
+}
 
 @keyframes beat {
-    to {
-        transform: scale(1.4);
-    }
+  to {
+    transform: scale(1.4);
+  }
 }
-
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
+  from {
+    opacity: 0;
+  }
 
-    }
-
-    to {
-        opacity: 1;
-
-    }
+  to {
+    opacity: 1;
+  }
 }
 
- /* Larger Devices*/
- @media (min-width:800px) {
+/* Larger Devices*/
+@media (min-width: 800px) {
+  .topSectionHello {
+    grid-template-columns: repeat(auto-fit, minmax(491px, 1fr));
+  }
 
-    .topSectionHello {
-        grid-template-columns: repeat(auto-fit, minmax(491px, 1fr));
-
-    }
-
-    .topSectionHello img {
-        width: 400px;
-    }
+  .topSectionHelloRightImage{
+    width: 400px;
+  }
 }

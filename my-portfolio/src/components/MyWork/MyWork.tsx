@@ -7,31 +7,35 @@ import DownArrow from "../Home/DownArrow";
 const MyWork = () => {
   return (
     <>
-      <div className={[styles.workSection,  commonStyle.sectionContainer].join(" ")} id="work">
+      <div
+        className={[styles.workSection, commonStyle.sectionContainer].join(" ")}
+        id="work"
+      >
         <div className={"sectionHeader"}>
           <h2>My Work</h2>
         </div>
-        <div className={  styles.sectionContents}>
+        <div className={styles.sectionContents}>
           {config.WorkData.map((myWorkItem, myWorkIndex) => {
             return (
-              <div className={styles.projectCard} key={myWorkIndex}>
-                <div>
-                  <img src={myWorkItem.ProjectImgSrc} />
+              <a href={myWorkItem.RepoUrl} key={myWorkIndex} target="_blank">
+                <div className={styles.projectCard} >
+                  <div>
+                    <img src={myWorkItem.ProjectImgSrc} />
+                  </div>
+                  <div className={styles.projectCardHeading}>
+                    <span>
+                      <b> {myWorkItem.ProjectTitle}</b>
+                    </span>
+                    <br />
+                    {myWorkItem.ProjectDescription}
+                  </div>
                 </div>
-                <div className={styles.projectCardHeading}>
-                  <span>
-                    <b> {myWorkItem.ProjectTitle}</b>
-                  </span>
-                  <br />
-                  {myWorkItem.ProjectDescription}
-                </div>
-              </div>
+              </a>
             );
           })}
         </div>
         <DownArrow navigateToSectionId="creds"></DownArrow>
       </div>
-      
     </>
   );
 };

@@ -35,6 +35,14 @@
   grid-column-gap: 2rem;
 }
 
+.workSection .sectionContents a {
+
+  cursor: pointer;
+  text-decoration: none;
+  color:black;
+
+}
+
 /* Larger Devices*/
 @media (min-width: 800px) {
   .workSection .sectionContents {

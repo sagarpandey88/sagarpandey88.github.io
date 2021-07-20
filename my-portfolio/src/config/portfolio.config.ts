@@ -5,6 +5,9 @@ import * as WorkImages from "../images/MyWork";
 export const APP_CONFIG = {
   Title: "Sagar Pandey",
   IntroSectionMessage: "Hi, I am a Full Stack Developer and Consultant",
+  GithubUrl:"https://github.com/sagarpandey88/",
+  ResumeUrl:"",
+  AvatarSrc:"",
   ExperienceData: [
     {
       Category: "Front End Development",
@@ -45,18 +48,21 @@ export const APP_CONFIG = {
   WorkData: [
     {
       ProjectTitle: "Portfolio",
-      ProjectDescription: "Lots of stuff here which will be display lol",
+      ProjectDescription: "A configurable portfolio with custom react project template.",
       ProjectImgSrc: WorkImages.portfolio,
+      RepoUrl:"https://github.com/sagarpandey88/"
     },
     {
       ProjectTitle: "CSR",
-      ProjectDescription: "Lots of stuff here which will be display lol",
+      ProjectDescription: "Corporate Social responsibility site as a service.",
       ProjectImgSrc: WorkImages.csr,
+      RepoUrl:"https://github.com/sagarpandey88/"
     },
     {
       ProjectTitle: "Vaccine Search",
-      ProjectDescription: "Lots of stuff here which will be display lol",
+      ProjectDescription: "A Small app to help find vaccination slots.",
       ProjectImgSrc: WorkImages.vaccine,
+      RepoUrl:"https://github.com/sagarpandey88/"
     },
   ],
   CredentailsData: [

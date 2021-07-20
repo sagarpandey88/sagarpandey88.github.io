@@ -1,16 +1,9 @@
-@use "../../styles/abstracts/global"  as gcss;
-
-
-$theme-color-yellow: #f9d976;
-$theme-color-pink: #f39f86;
-$theme-color-black: rgb(76, 76, 76);
-
 .gridHeader {
-  background-color: $theme-color-pink;
+  background-color: #f39f86;
   background-image: linear-gradient(
     315deg,
-    $theme-color-pink 0%,
-    $theme-color-yellow 74%
+    var(--headerColorGradientStart) 0%,
+    var(--headerColorGradientEnd) 74%
   );
   grid-column: 1 / span 1;
   height: 3rem;
@@ -35,7 +28,7 @@ $theme-color-black: rgb(76, 76, 76);
   display: flex;
   align-items: center;
 }
-.headerLogoSection img {
+.headerLogoSection object {
   width: 2.8rem;
 }
 
@@ -71,14 +64,13 @@ $theme-color-black: rgb(76, 76, 76);
   float: right;
 }
 
-
 .menuContainer {
   width: 100%;
   z-index: 100;
   display: inline-block;
   // background-color: #f39f86;
-  background-color:   gcss.$globalOrange;
- // background-image: gcss.$headerColorGradient;
+  background-color: var(--headerColorGradient);
+  // background-image: gcss.$headerColorGradient;
   //background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
   position: absolute;
   left: 0;
@@ -88,8 +80,7 @@ $theme-color-black: rgb(76, 76, 76);
   list-style: none;
   font-size: 3rem;
   margin-left: 13%;
-  float:none;
-  
+  float: none;
 }
 
 

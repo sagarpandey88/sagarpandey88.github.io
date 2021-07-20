@@ -2,18 +2,26 @@
 This file contains global colors and fonts. Pls use @use in reset of the css
 */
 
-$globalOrange:#f39f86;
-
 html {
-  $globalOrange:#fff;
-  $headerColorGradient: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+  --headerColorGradientStart: #f39f86;
+  --headerColorGradientEnd: #f9d976;
 }
 
-html[data-theme="blue"]{
-  
- 
-    $headerColorGradient:linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(3,182,141,1) 0%, rgba(0,212,255,1) 100%);
-    $globalOrange: #fff;
+
+
+html [data-theme="mustard"] {
+  --headerColorGradientStart: #f39f86;
+  --headerColorGradientEnd: #f9d976;
 }
 
+html[data-theme="sea"] {
+  --headerColorGradientStart: #76f9b1;
+  --headerColorGradientEnd: #76F9F3;
+}
+
+
+html[data-theme="tomato"] {
+  --headerColorGradientStart: #FF6347;
+  --headerColorGradientEnd: #ff371468;
+}
 
