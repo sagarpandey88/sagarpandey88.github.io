@@ -1,3 +1,4 @@
+export const appBar: string;
 export const burgerButton: string;
 export const closeButton: string;
 export const desktopNav: string;

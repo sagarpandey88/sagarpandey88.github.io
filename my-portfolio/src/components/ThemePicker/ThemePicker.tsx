@@ -34,6 +34,7 @@ const ThemePicker = () => {
     window.localStorage.setItem("portfolio-selectedTheme", themeId);
   };
 
+
   return (
     <div className={styles.themePickerOptions}>
       <ul>
@@ -64,6 +65,16 @@ const ThemePickerButton = (props: IThemePickerButton) => {
     setthemePickerVisible(!themePickerVisible);
   };
 
+  
+  React.useEffect(() => {
+    const selectedThemeId = 
+      window.localStorage.getItem("portfolio-selectedTheme")
+    ;
+    console.log(selectedThemeId);
+    const html = document.getElementsByTagName("html")[0];
+    html.setAttribute("data-theme", selectedThemeId);
+  }, []);
+
   return (
     <>
       <img
@@ -82,5 +93,5 @@ interface IThemePickerButton {
   //  onClick: () => void;
 }
 
-export { ThemePickerButton };
-export default ThemePicker;
+export { ThemePicker };
+export default ThemePickerButton;

@@ -5,7 +5,8 @@ import BurgerMenu from "./BurgerMenu";
 import spAvatar from "../../images/sp_Avataar.svg";
 import { scrollToElement } from "../../common/helpers";
 import * as config from "../../config/portfolio.config";
-import ThemePicker, { ThemePickerButton } from "../ThemePicker/ThemePicker";
+import ThemePickerButton from "../ThemePicker/ThemePicker";
+import AppBar from "./AppBar"
 
 const Header = (props: IHeader) => {
   const desktopView = (
@@ -35,9 +36,11 @@ const Header = (props: IHeader) => {
         </div>
         <div>
           {props.deviceType == "mobile" ? (
-            <BurgerMenu></BurgerMenu>
+            //<BurgerMenu></BurgerMenu>
+            <AppBar></AppBar>
           ) : (
             desktopView
+         
           )}
         </div>
       </div>
