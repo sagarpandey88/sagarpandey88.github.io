@@ -6,18 +6,18 @@ export function scrollToElement(id: string) {
 }
 
 export function timedScroll(scrolledHeight: number, elementOffset: number) {
-  setTimeout(function () {
+  requestAnimationFrame(function () {
 
     if (scrolledHeight < elementOffset) {
-      scrolledHeight = scrolledHeight + 20;
+      scrolledHeight = scrolledHeight + 30;
       window.scrollTo(0, scrolledHeight);
       if (scrolledHeight < elementOffset)
         timedScroll(scrolledHeight, elementOffset);
     } else {
-      scrolledHeight = scrolledHeight - 20;
+      scrolledHeight = scrolledHeight - 30;
       window.scrollTo(0, scrolledHeight);
       if (scrolledHeight > elementOffset)
         timedScroll(scrolledHeight, elementOffset);
     }
-  }, 15);
+  });
 }
