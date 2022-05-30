@@ -1,5 +1,5 @@
 import portfolio from "./portfolio.svg";
 import csr from "./csr.jpg";
-import vaccine from "./vaccine.jpg";
+import protonlist from "./protonlist.svg"
 
-export { portfolio, csr, vaccine };
+export { portfolio, csr , protonlist };

@@ -59,9 +59,9 @@ export const APP_CONFIG = {
       RepoUrl:"https://github.com/sagarpandey88/"
     },
     {
-      ProjectTitle: "Vaccine Search",
-      ProjectDescription: "A Small app to help find vaccination slots.",
-      ProjectImgSrc: WorkImages.vaccine,
+      ProjectTitle: "Proton List",
+      ProjectDescription: "A List storing application.",
+      ProjectImgSrc: WorkImages.protonlist,
       RepoUrl:"https://github.com/sagarpandey88/"
     },
   ],
