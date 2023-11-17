@@ -9,17 +9,20 @@ import {
   RiDribbbleLine,
   RiBehanceLine,
   RiPinterestLine,
+  RiGithubLine
 } from 'react-icons/ri';
+import { SiLeetcode } from "react-icons/si";
 
 const Socials = () => {
   return (
-    <div className='flex items-center gap-x-5 text-lg'>
+    <div className='flex items-center gap-x-5 text-3xl'>
       <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiYoutubeLine />
+        <RiGithubLine />
       </Link>
-      <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiFacebookLine />
+       <Link href={''} className='hover:text-accent transition-all duration-300'>
+        <SiLeetcode />
       </Link>
+      {/*
       <Link href={''} className='hover:text-accent transition-all duration-300'>
         <RiInstagramLine />
       </Link>
@@ -31,7 +34,7 @@ const Socials = () => {
       </Link>
       <Link href={''} className='hover:text-accent transition-all duration-300'>
         <RiPinterestLine />
-      </Link>
+      </Link> */}
     </div>
   );
 };

@@ -6,16 +6,25 @@ import {
   FaCss3,
   FaJs,
   FaReact,
-  FaWordpress,
-  FaFigma,
+  FaDatabase,
+
 } from 'react-icons/fa';
 
 import {
+  SiTypescript,
   SiNextdotjs,
-  SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop,
+  SiMicrosoftazure,
+  SiMongodb,
+  SiAmazonaws,
+  SiMicrosoftsharepoint, SiPowerapps, SiPowerautomate
 } from 'react-icons/si';
+
+import {
+  DiMsqlServer
+  , DiNodejs,
+  DiDotnet
+} from 'react-icons/di'
+
 
 //  about data
 export const aboutData = [
@@ -23,21 +32,29 @@ export const aboutData = [
     title: 'skills',
     info: [
       {
-        title: 'Web Development',
+        title: 'Frontend Web Development',
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          <FaHtml5 title="html" />,
+          <FaCss3 title="css3" />,
+          <FaJs title="javascript" />,
+          <SiTypescript title="typescript" />,
+          <FaReact title="ReactJs" />,
+          <SiNextdotjs title="Next.js" />,
+
         ],
       },
       {
-        title: 'UI/UX Design',
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        title: 'Backend Development',
+        icons: [<DiDotnet title=".NET" />, <DiNodejs title="nodejs" />],
       },
+      {
+        title: 'Databases',
+        icons: [<DiMsqlServer title="MS SQL" />, <FaDatabase title="Cosmos" />, <SiMongodb title="Mongo" />],
+      },
+      {
+        title: 'Platforms',
+        icons: [<SiMicrosoftazure title="Azure" />, <SiAmazonaws title="AWS" />, <SiMicrosoftsharepoint title="Microsoft SharePoint" />, <SiPowerapps title="PowerApps" />, <SiPowerautomate title="Power Automate" />],
+      }
     ],
   },
   {
@@ -126,8 +143,7 @@ const About = () => {
             exit='hidden'
             className='h2'
           >
-            Captivating <span className='text-accent'>stories</span> birth
-            magnificent designs.
+            Passion for <span className='text-accent'>excellence</span> in Software Engineering.
           </motion.h2>
           <motion.p
             variants={fadeIn('right', 0.4)}
@@ -136,9 +152,9 @@ const About = () => {
             exit='hidden'
             className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'
           >
-            10 years ago, I began freelancing as a developer. Since then, I've
-            done remote work for agencies, counsulted for startups, and
-            collaborated on digital products for business and consumer use.
+            I started my career with SharePoint and have explored and expanded my skillset to various full stack development and Cloud development areas.
+            Have a very good experience in developing and architecting large scale systems.
+            Currently working on a global scale document management portal having 1.2M workspaces and millions of documents.
           </motion.p>
           {/* counters */}
           <motion.div
@@ -152,7 +168,7 @@ const About = () => {
               {/* experience */}
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={10} duration={5} /> +
+                  <CountUp start={0} end={13} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
                   Years of experience
@@ -161,28 +177,19 @@ const About = () => {
               {/* clients */}
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={250} duration={5} /> +
+                  <CountUp start={0} end={7300} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Satisfied clients
+                  git commits
                 </div>
               </div>
               {/* projects */}
               <div className='relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'>
                 <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={650} duration={5} /> +
+                  <CountUp start={0} end={470} duration={5} /> +
                 </div>
                 <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Finished projects
-                </div>
-              </div>
-              {/* awards */}
-              <div className='relative flex-1'>
-                <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={8} duration={5} /> +
-                </div>
-                <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Winning awards
+                  User Stories
                 </div>
               </div>
             </div>
@@ -201,10 +208,9 @@ const About = () => {
               return (
                 <div
                   key={itemIndex}
-                  className={`${
-                    index === itemIndex &&
+                  className={`${index === itemIndex &&
                     'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'
-                  }  cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                    }  cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                   onClick={() => setIndex(itemIndex)}
                 >
                   {item.title}
@@ -226,7 +232,9 @@ const About = () => {
                   <div className='flex gap-x-4'>
                     {/* icons */}
                     {item.icons?.map((icon, itemIndex) => {
-                      return <div className='text-2xl text-white'>{icon}</div>;
+                      return <div className='text-2xl text-white'>
+                        {icon}
+                      </div>;
                     })}
                   </div>
                 </div>

@@ -29,3 +29,11 @@ Below is the feature status
 
 
 
+# Version 2 Updates
+Now the code uses NextJs
+update tailwind.config.js primary: '#016312',
+
+In transition.js
+014d3b
+007546
+016312

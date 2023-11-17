@@ -13,6 +13,15 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 
 const Home = () => {
+
+  const getYearsAsInteger = (date)=> {
+    const today = new Date();
+    const millisecondsPerDay = 1000 * 60 * 60 * 24;
+    const daysSinceDate = Math.floor((today - date) / millisecondsPerDay);
+    const yearsAsInteger = daysSinceDate / 365;
+    return yearsAsInteger.toFixed(0);
+  }
+
   return (
     <div className='bg-primary/60 h-full'>
       {/* text */}
@@ -26,8 +35,8 @@ const Home = () => {
             exit='hidden'
             className='h1'
           >
-            Transforming Ideas <br /> Into{' '}
-            <span className='text-accent'>Digital Reality</span>
+            Full Stack Development <br /> {' '}
+            <span className='text-accent'>Enthusiast</span>
           </motion.h1>
           {/* subtitle */}
           <motion.p
@@ -37,9 +46,11 @@ const Home = () => {
             exit='hidden'
             className='max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16'
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+            I have {getYearsAsInteger(new Date("2010/12/06"))} years of experience in full stack and cloud based development.
+            
+            {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
             nostrum quam reprehenderit vero, tenetur voluptatem nulla aut
-            aspernatur dolores ut.
+            aspernatur dolores ut. */}
           </motion.p>
           {/* btn */}
           <div className='flex justify-center xl:hidden relative'>
