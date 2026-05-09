@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	body {
+		@apply bg-slate-100 text-slate-900;
+	}
+
+	a {
+		@apply text-amber-400;
+	}
+
+	.card {
+		@apply bg-slate-900 border border-slate-700 rounded-md;
+	}
+
+	.elevated:hover {
+		@apply bg-slate-800;
+	}
+
+	.accent {
+		@apply text-amber-400;
+	}
+}
+
+@layer components {
+	.reveal {
+		opacity: 0;
+		transform: translateY(24px);
+		transition-property: opacity, transform;
+		transition-duration: 900ms;
+		transition-timing-function: cubic-bezier(.2,.8,.2,1);
+		will-change: opacity, transform;
+	}
+
+	.reveal.active {
+		opacity: 1;
+		transform: none;
+	}
+
+	/* Staggered child items inside a reveal container */
+	.reveal .reveal-child {
+		opacity: 0;
+		transform: translateY(16px);
+		transition-property: opacity, transform;
+		transition-duration: 900ms;
+		transition-timing-function: cubic-bezier(.2,.8,.2,1);
+		will-change: opacity, transform;
+	}
+
+	.reveal.active .reveal-child {
+		opacity: 1;
+		transform: none;
+	}
+
+	.reveal .reveal-child[data-delay="1"] { transition-delay: 60ms; }
+	.reveal .reveal-child[data-delay="2"] { transition-delay: 120ms; }
+	.reveal .reveal-child[data-delay="3"] { transition-delay: 180ms; }
+	.reveal .reveal-child[data-delay="4"] { transition-delay: 240ms; }
+	.reveal .reveal-child[data-delay="5"] { transition-delay: 300ms; }
+	.reveal .reveal-child[data-delay="6"] { transition-delay: 360ms; }
+	.reveal .reveal-child[data-delay="7"] { transition-delay: 420ms; }
+	.reveal .reveal-child[data-delay="8"] { transition-delay: 480ms; }
+}
