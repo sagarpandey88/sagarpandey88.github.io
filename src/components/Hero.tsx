@@ -12,7 +12,7 @@ export function Hero({ isDark, onNavigate }: HeroProps) {
   const { personal, stats } = portfolioConfig;
 
   return (
-    <section className={`pt-32 pb-20 ${isDark ? 'bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900' : 'bg-gradient-to-br from-slate-100 via-slate-100 to-slate-200'} ${isDark ? 'text-white' : 'text-slate-900'} relative overflow-hidden`}>
+    <section className={`pt-32 pb-20 min-h-screen ${isDark ? 'bg-gradient-to-br from-slate-900 via-slate-800 to-teal-900' : 'bg-gradient-to-br from-slate-100 via-slate-100 to-slate-200'} ${isDark ? 'text-white' : 'text-slate-900'} relative overflow-hidden`}>
       <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148,163,184,0.4) 1px, transparent 0)', backgroundSize: '32px 32px' }} />
       <div className="max-w-6xl mx-auto px-6 relative">
         <Reveal>

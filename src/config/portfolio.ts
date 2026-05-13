@@ -36,7 +36,6 @@ export const portfolioConfig = {
       'React / Next.js',
       'Docker',
       'CI/CD Pipelines',
-      'Event-Driven Architecture',
       'Infrastructure as Code',
     ],
     aiml: [
@@ -54,7 +53,7 @@ export const portfolioConfig = {
       'Power Platform',
       'Power Automate',
       'Power Apps',
-      'Microsoft Graph API'    ],
+      'Microsoft Graph API'],
   },
   stats: [
     { value: '15+', label: 'Years Experience' },
@@ -118,82 +117,73 @@ export const portfolioConfig = {
   ],
   projects: [
     {
-      title: 'Enterprise AI Knowledge Hub',
+      title: 'Enterprise AI based RAG System',
       description:
         'A Retrieval-Augmented Generation (RAG) platform built on Azure AI Foundry and Azure OpenAI Service, enabling employees to query internal knowledge bases through a natural-language Teams interface.',
       impact: [
-        'Reduced average internal query resolution time from 4.2 hours to 8 minutes',
-        'Indexed 2M+ documents across SharePoint, Confluence, and Azure Blob Storage',
-        'Achieved 94% user satisfaction rating within 3 months of launch',
+        'Can index 2M+ documents across SharePoint, Confluence, and Azure Blob Storage',
+        'Allow AI based searches across organizational knowledge.',
       ],
-      stack: ['Azure AI Foundry', 'Azure OpenAI', 'Node.js', 'Teams', 'SharePoint', 'Cosmos DB'],
-        repoUrl: '',
-        demoUrl: '',
-        icon: 'Brain',
+      stack: ['Azure AI Foundry', 'Azure OpenAI', 'Node.js', 'Teams', 'SharePoint', 'PostgresSQL'],
+      icon: 'Brain',
+      repoUrl: 'https://github.com/sagarpandey88/ragol',
+      demoUrl: 'https://wa-ragol-ci-001-hpg3dmgnchcbfseb.centralindia-01.azurewebsites.net',
     },
     {
-      title: 'Global M365 Productivity Platform',
+      title: 'Agentic AI based Architectural Design Assistant',
       description:
-        'A unified Microsoft 365 integration layer connecting SharePoint, Teams, Power Automate, and a custom Node.js backend to automate HR, procurement, and compliance workflows across 12 international offices.',
+        'An AI-powered architectural design assistant leveraging LangGraph to generate dynamic architecture diagrams and documentation based on natural language prompts from architects and engineers.',
       impact: [
-        'Automated 200+ business processes previously handled manually',
-        'Reduced process cycle time by an average of 71% across departments',
-        'Delivered $1.8M in measured operational savings in year one',
+        'Automated generation of architecture diagrams and documentation from natural language prompts',
+        'Brainstorming architectural solutions and providing best practices based on Microsoft’s Cloud Adoption Framework',
+
       ],
-      stack: ['M365', 'Power Platform', 'Graph API', 'Node.js', 'Azure Functions', 'Azure AD'],
-        repoUrl: '',
-        demoUrl: '',
-        icon: 'Layers',
+      stack: ['LangGraph', 'PostgresSQL', 'Node.js', 'Azure Open AI', 'Azure Foundry'],
+      icon: 'Layers',
+      repoUrl: 'https://github.com/sagarpandey88/desol',
+      demoUrl: 'https://wa-desol-ci-001-asfwf3gtffgrhzgd.centralindia-01.azurewebsites.net',
     },
     {
-      title: 'Cloud-Native Microservices Platform',
+      title: 'Enterprise Platform ADLC',
       description:
-        'Re-architecture of a legacy enterprise platform into a containerized microservices ecosystem on Azure Kubernetes Service, with full CI/CD automation through Azure DevOps.',
+        'Leveraging Skills and Agents in Coding Assistant to accelerate development and deployment processes for Enterprise Platform based apps.',
       impact: [
-        'Scaled from 50K to 1.2M daily active users without infrastructure rework',
-        'Decreased deployment frequency from monthly to multiple times per day',
-        'Cut cloud infrastructure spend by 38% through right-sizing and autoscaling',
+        'Reduce Dev Onboarding time for new developers through interactive AI-driven learning paths and codebase exploration',
+        'Streamline Development environment setup and code generation through AI agents, reducing time spent on boilerplate code and environment configuration',
+        'Provisions Sandbox environments for Developers for Platform based solution.'
       ],
-      stack: ['AKS', 'Node.js', 'Azure DevOps', 'Cosmos DB', 'Azure Service Bus', 'Key Vault'],
-        repoUrl: 'https://github.com/test',
-        demoUrl: 'https://github.com/test',
-        icon: 'Server',
+      stack: ['github Copilot', 'Claude Code', 'Skills.md', 'Agentic Copilot', 'Agents.md'],
+      icon: 'Server',
+      repoUrl: 'https://github.com/sagarpandey88/spfx-full-autonomy',
+      demoUrl: '',
     },
     {
-      title: 'Real-Time ML Analytics Engine',
+      title: 'Sports result prediction using AI',
       description:
-        'A machine learning pipeline on Azure Machine Learning that ingests streaming telemetry data, applies predictive models, and surfaces anomaly alerts into Power BI dashboards and Teams notifications.',
+        'A fun sports prediction project leveraging AI to forecast game outcomes.',
       impact: [
-        'Reduced equipment downtime by 34% through predictive maintenance alerts',
-        'Processed 12TB of telemetry data monthly with sub-second latency',
-        'Achieved 91% precision in anomaly detection, exceeding baseline by 22 points',
+        'A fun project that applies AI to predict sports results, showcasing the versatility of AI technologies in various domains.',
       ],
-      stack: ['Azure ML', 'Azure Functions', 'Node.js', 'Power BI', 'Cosmos DB', 'Event Hubs'],
-        repoUrl: '',
-        demoUrl: '',
-        icon: 'Cpu',
+      stack: ['Azure OpenAI', 'LangChain', 'Node.js'],
+      icon: 'Cpu',
+      repoUrl: 'https://github.com/sagarpandey88/sporaclet',
+      demoUrl: '',
     },
   ],
   certifications: [
-    { name: 'Microsoft Certified: Azure Solutions Architect Expert', issuer: 'Microsoft', year: '2023' },
-    { name: 'Microsoft Certified: Azure AI Engineer Associate', issuer: 'Microsoft', year: '2023' },
-    { name: 'Microsoft 365 Certified: Enterprise Administrator Expert', issuer: 'Microsoft', year: '2022' },
-    { name: 'AWS Certified Solutions Architect – Associate', issuer: 'Amazon Web Services', year: '2021' },
-    { name: 'Certified Kubernetes Administrator (CKA)', issuer: 'CNCF', year: '2022' },
+    { name: 'Microsoft Certified: M365 Developer Associate', issuer: 'Microsoft', year: '2021' },
+    { name: 'Microsoft Certified: Web Applications', issuer: 'Microsoft', year: '2016' },
+    { name: 'Microsoft Certified: Azure App Builder', issuer: 'Microsoft', year: '2016' },
+    { name: 'Microsoft Certified : Azure Fundamentals', issuer: 'Microsoft', year: '2021' }
   ],
   education: [
     {
-      degree: 'M.S. Computer Science',
-      school: 'University of Washington',
-      details: 'Concentration: Distributed Systems · 2013',
-    },
-    {
-      degree: 'B.S. Computer Engineering',
-      school: 'University of Illinois Urbana-Champaign',
-      details: 'Magna Cum Laude · 2011',
-    },
+      degree: 'BE Electronics',
+      school: '',
+      details: '2010',
+    }
   ],
-  continuousLearning: ['Azure Architecture Center', 'MIT OpenCourseWare ML', 'Node.js Patterns', 'CNCF Landscape'],
+  continuousLearning: ['Machine Learning', 'Agentic AI', 'Node.js Patterns'],
   tagColors: {
     Azure: 'bg-sky-600 text-white',
     'Node.js': 'bg-green-600 text-white',
@@ -214,7 +204,7 @@ export const portfolioConfig = {
   navLinks: [
     { id: 'summary', label: 'About' },
     { id: 'skills', label: 'Skills' },
-  
+
     { id: 'projects', label: 'Projects' },
     { id: 'certifications', label: 'Credentials' },
     { id: 'contact', label: 'Contact' },
