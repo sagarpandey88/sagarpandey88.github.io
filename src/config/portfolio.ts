@@ -7,7 +7,9 @@ export const portfolioConfig = {
     email: 'sagar.pandey@example.com',
     phone: '+1 (206) 555-0198',
     location: 'Mumbai, India',
-    linkedIn: 'linkedin.com/in/sagarpandey88',
+    linkedIn: 'https://linkedin.com/in/sagarpandey88',
+    github: 'https://github.com/sagarpandey88',
+    blog: 'https://sagarpandey88.github.io',
     resumeUrl: '/resume.pdf',
     summary: [
       'Solution Architect with 15+ years of experience designing scalable, secure, and cost-effective cloud solutions across enterprise environments. Deep expertise in Azure cloud services, Microsoft 365 integration, Node.js microservices, and AI/ML pipeline architecture.',
