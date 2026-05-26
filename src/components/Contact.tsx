@@ -1,6 +1,9 @@
 import { Mail, Linkedin, Github, ExternalLink } from 'lucide-react';
 import { SectionHeader } from './SectionHeader';
 import Reveal from './Reveal';
+import { portfolioConfig } from '../config/portfolio';
+
+const { personal } = portfolioConfig;
 
 interface ContactProps {
   isDark: boolean;
@@ -23,9 +26,9 @@ export function Contact({ isDark }: ContactProps) {
             <ContactCard icon={<MapPin size={18} />} label="Location" value={personal.location} isDark={isDark} />
           </div> */}
           <div className="flex justify-center gap-4">
-            <SocialLink icon={<Linkedin size={18} />} label="LinkedIn" isDark={isDark} />
-            <SocialLink icon={<Github size={18} />} label="GitHub" isDark={isDark} />
-            <SocialLink icon={<ExternalLink size={18} />} label="Blog" isDark={isDark} />
+            <SocialLink icon={<Linkedin size={18} />} href={personal.linkedIn} label="LinkedIn" isDark={isDark} />
+            <SocialLink icon={<Github size={18} />} href={personal.github} label="GitHub" isDark={isDark} />
+            {/* <SocialLink icon={<ExternalLink size={18} />} href={personal.blog} label="Blog" isDark={isDark} /> */}
           </div>
         </div>
       </Reveal>
@@ -35,10 +38,10 @@ export function Contact({ isDark }: ContactProps) {
 
 // ContactCard removed (unused) — kept SocialLink for visible actions
 
-function SocialLink({ icon, label, isDark }: { icon: React.ReactNode; label: string; isDark: boolean }) {
+function SocialLink({ icon, label, href, isDark }: { icon: React.ReactNode; label: string; href: string; isDark: boolean }) {
   return (
-    <button className={`flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-lg transition-colors ${isDark ? 'bg-white/10 hover:bg-white/20 border border-white/20 text-white' : 'bg-slate-900/10 hover:bg-slate-900/20 border border-slate-900/20 text-slate-900'}`}>
+    <a href={href} target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-lg transition-colors ${isDark ? 'bg-white/10 hover:bg-white/20 border border-white/20 text-white' : 'bg-slate-900/10 hover:bg-slate-900/20 border border-slate-900/20 text-slate-900'}`}>
       {icon} {label}
-    </button>
+    </a>
   );
 }

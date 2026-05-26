@@ -60,9 +60,9 @@ export function Hero({ isDark, onNavigate }: HeroProps) {
                 {/* <span className="flex items-center gap-1.5">
                   <Mail size={13} /> {personal.email}
                 </span> */}
-                <span className="flex items-center gap-1.5">
+                <a href={personal.linkedIn} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 hover:text-amber-400 transition-colors">
                   <Linkedin size={13} /> {personal.linkedIn}
-                </span>
+                </a>
               </div>
             </div>
           </div>
