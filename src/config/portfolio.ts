@@ -160,6 +160,20 @@ export const portfolioConfig = {
       demoUrl: '',
     },
     {
+      title: 'WBS Generator',
+      description:
+        'An AI Powered  Work Breakdown Structure generator. Generates Gantt Chart , WBS , High level Architecture',
+      impact: [
+        'Enable AI-driven project planning and accelerate project execution',
+        'Improve Accuracy and completeness of WBS'
+
+      ],
+      stack: ['LangGraph', 'Node.js', 'NextJS', 'Azure AI', 'Azure OpenAI', 'Azure Foundry'],
+      icon: 'Server',
+      repoUrl: 'https://github.com/sagarpandey88/m365-wbs-generator',
+      demoUrl: 'https://wa-ci-wbsgen-001.azurewebsites.net',
+    },
+    {
       title: 'Sports result prediction using AI',
       description:
         'A fun sports prediction project leveraging AI to forecast game outcomes.',
