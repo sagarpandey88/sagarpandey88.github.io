@@ -119,6 +119,34 @@ export const portfolioConfig = {
   ],
   projects: [
     {
+      title: 'pp-pedia',
+      description:
+        'A fully client-side Power Platform documentation generator and agentic RAG assistant that parses solution archives, extracts dependencies, and visualizes architectures 100% in-browser.',
+      impact: [
+        '100% in-browser processing with zero server uploads, keeping enterprise solution data and IP private and secure',
+        'Automates documentation, relational dependency mapping, and interactive Mermaid diagrams for Power Apps, Flows, and Dataverse',
+        'Built-in client-side vector search and agentic RAG assistant for blast-radius analysis, schema inspection, and code audits',
+      ],
+      stack: ['React', 'TypeScript', 'PGlite (WASM)', 'Transformers.js', 'Web Workers', 'Tailwind CSS', 'Mermaid.js'],
+      icon: 'BookOpen',
+      repoUrl: 'https://github.com/sagarpandey88/pp-pedia',
+      demoUrl: 'https://sagarpandey88.github.io/pp-pedia/',
+    },
+    {
+      title: 'pp-qa',
+      description:
+        'An automated testing, inspection, and verification platform for Microsoft Power Platform and Copilot Studio, featuring agentic test authoring, Dataverse solution ingestion, and Playwright execution.',
+      impact: [
+        'Automates Dataverse solution ingestion, deep XML/flow/bot metadata extraction, and generates comprehensive Markdown specs with ERDs',
+        'Synthesizes strongly-typed TypeScript Playwright test suites from conversational AI scenario cards using Microsoft Page Object Models',
+        'Executes headless test runs with dual-domain Entra ID authentication, real-time SSE streaming logs, and Playwright HTML/trace reports',
+      ],
+      stack: ['Playwright', 'TypeScript', 'Node.js', 'Fluent UI v9', 'PostgreSQL', 'Agentic AI'],
+      icon: 'ShieldCheck',
+      repoUrl: 'https://github.com/sagarpandey88/pp-qa',
+      demoUrl: '',
+    },
+    {
       title: 'Enterprise AI based RAG System',
       description:
         'A Retrieval-Augmented Generation (RAG) platform built on Azure AI Foundry and Azure OpenAI Service, enabling employees to query internal knowledge bases through a natural-language Teams interface.',

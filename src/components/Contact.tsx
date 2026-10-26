@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, ExternalLink } from 'lucide-react';
+import { Mail, Linkedin, Github } from 'lucide-react';
 import { SectionHeader } from './SectionHeader';
 import Reveal from './Reveal';
 import { portfolioConfig } from '../config/portfolio';

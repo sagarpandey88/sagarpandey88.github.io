@@ -1,4 +1,4 @@
-import { Database, Brain, Layers, Server, Cpu, Github, ExternalLink } from 'lucide-react';
+import { Database, Brain, Layers, Server, Cpu, BookOpen, ShieldCheck, Github, ExternalLink } from 'lucide-react';
 import { SectionHeader } from './SectionHeader';
 import { portfolioConfig } from '../config/portfolio';
 import Reveal from './Reveal';
@@ -16,6 +16,8 @@ export function Projects({ isDark }: ProjectsProps) {
     Layers,
     Server,
     Cpu,
+    BookOpen,
+    ShieldCheck,
   };
 
   return (
@@ -24,7 +26,7 @@ export function Projects({ isDark }: ProjectsProps) {
         <SectionHeader icon={<Database size={20} />} title="Featured Projects" isDark={isDark} />
         <div className="grid md:grid-cols-2 gap-6">
           {projects.map((p, i) => {
-          const IconComponent = iconMap[p.icon as keyof typeof iconMap];
+          const IconComponent = iconMap[p.icon as keyof typeof iconMap] || Brain;
           return (
             <div key={i} className={`${isDark ? 'bg-slate-900' : 'bg-slate-200'} rounded-2xl border ${isDark ? 'border-slate-800' : 'border-slate-200'} p-7 shadow-sm hover:shadow-md transition-shadow flex flex-col`}>
               <Stagger>
